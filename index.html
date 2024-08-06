@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./index.js" defer></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/" class="theform" id="form">
+      <h1>Contact Us</h1>
+      <div class="usersnames">
+        <div class="firstname">
+          <label for="first">First Name <span>*</span></label>
+          <input type="text" id="first" />
+          <p class="error"></p>
+        </div>
+        <div class="lastname">
+          <label for="last">Last Name <span>*</span></label>
+          <input type="text" id="last" />
+          <p class="error"></p>
+        </div>
+      </div>
+      <div class="emailaddress">
+        <label for="email">Email Address <span>*</span></label>
+        <input type="email" id="email" />
+        <p class="error"></p>
+      </div>
+      <p class="query-text">Query Type <span>*</span></p>
+      <div class="querytype">
+        <div class="radio">
+          <input type="radio" id="general" name="query" value="generalQuery" />
+          <label for="general">General Enquiry</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="support" name="query" value="supportQuery" />
+          <label for="Support">Support Request</label>
+        </div>
+        <p class="error"></p>
+      </div>
+      <div class="message">
+        <label for="message">Message <span>*</span></label>
+        <textarea name="message" id="message" cols="30" rows="5"></textarea>
+        <p class="error"></p>
+      </div>
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" value="consent" />
+        <label for="consent">I consent to being contacted by the team</label>
+        <p class="error"></p>
+      </div>
+      <button class="submitbtn">Submit</button>
+    </form>
+    <!-- Edit below writeup-->
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by
+      <a href="https://github.com/DrizzyD1717">Olulana Oluwadarimisire</a>.
+    </div>
+    <div class="formsubmitted">
+      <h2>Message Sent!</h2>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+  </body>
+</html>

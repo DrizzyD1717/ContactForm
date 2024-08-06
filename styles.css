@@ -1,0 +1,196 @@
+:root {
+  --light-green: hsl(148, 38%, 91%);
+  --medium-green: hsl(169, 82%, 27%);
+
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(186, 15%, 59%);
+  --dark-grey: hsl(187, 24%, 22%);
+}
+
+* {
+  font-family: "Karla", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  border: 1px solid var(--light-grey);
+  outline: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-green);
+  padding: 1rem;
+  position: relative;
+}
+
+form.theform {
+  background-color: var(--white);
+  padding: 1rem;
+  border-radius: 10px;
+  height: 600px;
+  width: 600px;
+}
+
+form.theform div {
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+input {
+  display: block;
+  color: var(--dark-grey);
+}
+
+form.theform .usersnames {
+  width: 100%;
+  display: flex;
+  gap: 0 1.5rem;
+}
+
+form.theform .usersnames input,
+.emailaddress input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.firstname,
+.lastname {
+  width: 100%;
+}
+
+.query-text {
+  padding-bottom: 0.5rem;
+}
+
+.querytype {
+  display: flex;
+  gap: 0 1.5rem;
+}
+
+.radio {
+  display: flex;
+  width: 100%;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--medium-green);
+  border-radius: 5px;
+  align-items: center;
+}
+
+.message textarea {
+  display: block;
+  width: 100%;
+  color: var(--dark-grey);
+  padding: 0.5rem;
+}
+
+.consent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0 0.5rem;
+}
+
+.submitbtn {
+  width: 100%;
+  background-color: var(--medium-green);
+  text-align: center;
+  color: var(--white);
+  padding: 0.5rem 0;
+  outline: none;
+  border-radius: 5px;
+}
+
+span {
+  color: var(--medium-green);
+}
+
+#consent:checked {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background-color: var(--medium-green);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.success {
+  border: 2px solid green;
+}
+
+.failure {
+  border: 1px solid red;
+}
+
+.formsubmitted {
+  position: absolute;
+  top: 2rem;
+  left: 40%;
+  width: 300px;
+  height: 100px;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  background-color: var(--dark-grey);
+  display: none;
+}
+
+.formsubmitted h2 {
+  color: var(--white);
+}
+
+.formsubmitted p {
+  font-size: 12px;
+  color: var(--light-grey);
+}
+
+/* Responsive CSS */
+
+@media (max-width: 750px) {
+  body {
+    height: 100%;
+  }
+
+  form.theform {
+    width: 100%;
+    height: 100%;
+  }
+
+  form.theform .usersnames {
+    flex-direction: column;
+    gap: 1rem 0;
+  }
+
+  .querytype {
+    flex-direction: column;
+    gap: 0.5rem 0;
+  }
+
+  .formsubmitted {
+    left: 10%;
+  }
+}
